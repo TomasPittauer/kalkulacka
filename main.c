@@ -34,7 +34,7 @@ int main(){
 
            break;
         default:
-            fprintf(stderr, "chyba");
+            fprintf(stderr, "Chyba");
             return -1;
     }
 
