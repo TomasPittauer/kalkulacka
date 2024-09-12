@@ -31,13 +31,13 @@ int main() {
         case '/':
             if (dva == 0) {
                 fprintf(stderr, "Nesmis delit nulou");
-                exit(1);
+                return -1;
             } else {
                 printf("%.2f", jedna / dva);
             }
             break;
         default:
             fprintf(stderr, "Chyba");
-            exit(1);
+            return -1;
     }
 }
