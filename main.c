@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main(){
+int main() {
 
     char akce;
     float jedna;
@@ -19,23 +19,25 @@ int main(){
 
     switch (akce) {
 
-        case '+': printf("%.2f", jedna + dva);
-        break;
-        case '-': printf("%.2f", jedna - dva);
+        case '+':
+            printf("%.2f", jedna + dva);
             break;
-        case '*': printf("%.2f", jedna * dva);
+        case '-':
+            printf("%.2f", jedna - dva);
             break;
-        case '/': if (dva == 0){
+        case '*':
+            printf("%.2f", jedna * dva);
+            break;
+        case '/':
+            if (dva == 0) {
                 fprintf(stderr, "Nesmis delit nulou");
-                return -1;
-        } else{
-            printf("%.2f", jedna / dva);
-        }
-
-           break;
+                exit(1);
+            } else {
+                printf("%.2f", jedna / dva);
+            }
+            break;
         default:
             fprintf(stderr, "Chyba");
-            return -1;
+            exit(1);
     }
-
 }
